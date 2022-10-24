@@ -10,20 +10,22 @@ public class App {
         boolean isWorking = true;
         Scanner scanner = new Scanner(System.in);
         BmiDB bmiDB = new BmiDB();
-        while(isWorking){
+
+        while (isWorking) {
             GUI.showMenu();
-            switch(scanner.nextLine()){
+            switch (scanner.nextLine()) {
                 case "1":
                     GUI.addBmi(bmiDB);
-                    GUI.showResult(bmiDB.getBmis()[bmiDB.getBmis().length-1].getBmiVal());
+                    GUI.showResult(bmiDB);
                     break;
                 case "2":
+                    GUI.remindResult(bmiDB);
                     break;
                 case "3":
-                    isWorking=false;
+                    isWorking = false;
                     break;
                 default:
-                    System.out.println("Wrong number!");
+                    System.out.println("Zły numer!");
                     break;
             }
         }

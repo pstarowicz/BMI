@@ -6,22 +6,11 @@ public class Bmi {
     private double bmiVal;
     private int id;
 
-    /*public Bmi(int height, int weight) {
-        this.height = height;
-        this.weight = weight;
-        this.bmiVal = this.calculateBMI(height,weight);
-        this.id = 1;
-    }*/
-
     public Bmi() {
     }
 
-    public double calculateBMI(int height,int weight){
+    public double calculateBMI(int height, int weight) {
         return ((double) weight) * 1e4 / (((double) height) * ((double) height));
-    }
-
-    public int makeId(){
-        return 1;
     }
 
     public int getHeight() {
